@@ -1,8 +1,5 @@
 package com.movies.moviecatelogservice.resources;
 
-import java.lang.reflect.ParameterizedType;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,19 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.reactive.function.client.WebClient.RequestHeadersUriSpec;
 
 import com.movies.moviecatelogservice.models.CatalogItem;
 import com.movies.moviecatelogservice.models.Movie;
-import com.movies.moviecatelogservice.models.Rating;
 import com.movies.moviecatelogservice.models.UserRating;
-
-
 
 @RestController
 @RequestMapping("/catalog")
 public class MovieCatalogResource {
-	
+
 	@Autowired
 	private RestTemplate restTemplate;
 	
